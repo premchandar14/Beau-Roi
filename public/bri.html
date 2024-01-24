@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>website sample new</title>
+    <style>
+        .ball-mouse-section {
+
+  background-color: #ddd;
+  position: relative;
+  cursor: none;
+}
+
+.ball-mouse {
+  width: 30px;
+  height: 30px;
+  border-width:1px;
+  border-color: #87CEFA; /* Blue color */
+  background-color: rgba(0, 0, 255, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+    </style>
+</head>
+
+<body class="mx-auto font-['Montserrat']">
+
+
+<nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        </a>
+        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mega-menu-full" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div id="mega-menu-full" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+            <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+                <li>
+                    <a href="#" class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Company <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+  </svg></button>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Resources</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="mega-menu-full-dropdown" class="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600">
+        <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:grid-cols-3 md:px-6">
+            <ul aria-labelledby="mega-menu-full-dropdown-button">
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Online Stores</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Segmentation</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Marketing CRM</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Online Stores</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Segmentation</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Marketing CRM</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="hidden md:block">
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Audience Management</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Creative Tools</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                        <div class="font-semibold">Marketing Automation</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <div class="min-h-[100%]">
+        <div class="contents">
+            <div class="  min-h-[100%]">
+                <div class="contents">
+                    <section class="bg-opacity-[100%] bg-gradient-to-r from-blue-white to-emerald-100 style="">
+                    <div class=" mt-[0px] mr-[auto] mb-[0px] ml-[auto] pt-[0px] md:pr-[32px] sm:pr-[24px] pr-[24px] lg:pr-[32px] pb-[0px] md:pl-[32px] sm:pl-[24px] pl-[24px] lg:pl-[32px] max-w-[1280px]">
+                        <div class="flex items-center justify-between"><a class="">
+                                <div class="flex items-center justify-center flex-col sm:flex-col">
+                                    <h1 class="text-[48px] font-bold text-opacity-[100%] text-[#D4D4D4]" style=""><em class=""><sup class="">logo</sup></em></h1>
+                                </div>
+                            </a>
+                            <div class="md:flex sm:flex hidden lg:flex items-center md:space-x-[64px] sm:space-x-[32px] space-x-[32px] lg:space-x-[64px]"><a class="font-figtree bg-[transparent] transition ease-in-out text-[copacity-[100%] focus:outline-none no-underline text-[16px] normal-case tracking-[0px] pr-[12px] pl-[12px] pt-[4px] pb-[4px] bg-[#000000] hover:bg-[#FFFFFF] hover:bg-opacity-[10%] rounded-[9999px] bg-opacity-[0%] texopacity-[100%] text-[#D4D4D4]" style="">Features</a> <a class="font-figtree bg-[transparent] transition ease-in-out text-[copacity-[100%] focus:outline-none no-underline text-[16px] normal-case tracking-[0px] pr-[12px] pl-[12px] pt-[4px] pb-[4px] bg-[#000000] hover:bg-[#FFFFFF] hover:bg-opacity-[10%] rounded-[9999px] bg-opacity-[0%] texopacity-[100%] text-[#D4D4D4]" style="">Services</a> <a class="font-figtree bg-[transparent] transition ease-in-out text-[copacity-[100%] focus:outline-none no-underline text-[16px] normal-case tracking-[0px] pr-[12px] pl-[12px] pt-[4px] pb-[4px] bg-[#000000] hover:bg-[#FFFFFF] hover:bg-opacity-[10%] rounded-[9999px] bg-opacity-[0%] texopacity-[100%] text-[#D4D4D4]">FAQ</a> </div>
+                            <div class="md:block sm:block hidden lg:block"><button type="button" class="border-[transparent] border-[1px] inline-block font-figtree text-[black] bg-[white] transform transition ease-in-out rounded-[8px] bopacity-[100%] bordeopacity-[0%] border-[#000000] border-solid focus:outline-none leading-[1.375em] text-[#000000] tracking-[0px] font-medium bg-[#FFFFFF] hover:scale-[1.05] text-[16px] pt-[8px] pb-[8px] pr-[16px] pl-[16px] text-opacity-[100%]"><span class="text-[14px]">Get started</span> </button> </div> <button type="button" id="menu-toggle" class="text-[14px] tracking-[0.025em] pr-[12px] sm:pr-[20px] pl-[12px] sm:pl-[20px] border-[transparent] border-[1px] md:bordeopacity-[0%] sm:bordeopacity-[0%] bopacity-[100%] lg:bordeopacity-[0%] md:text-[#FFFFFF] sm:text-[#FFFFFF] text-[#000000] lg:text-[#FFFFFF] leading-[1.25rem] md:pt-[8px] sm:pt-[8px] pt-[12px] lg:pt-[8px] md:pb-[8px] sm:pb-[8px] pb-[12px] lg:pb-[8px] md:rounded-[6px] sm:rounded-[6px] rounded-[9999px] lg:rounded-[6px] border-[#000000] border-solid focus:outline-none md:hidden sm:hidden flex lg:hidden md:items-start sm:items-start items-center lg:items-start md:justify-start sm:justify-start justify-center lg:justify-start bg-[#FFFFFF] sm:bg-[#000000] opacity-[100%] md:text-opacity-[100%] sm:text-opacity-[100%] text-opacity-[100%] lg:text-opacity-[100%]"><i class="inline-block w-[24px] h-auto"><i class="inline-block w-[24px] h-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M3 9a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9zm0 6.75a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd"></path>
+                                        </svg></i></i> </button>
+                        </div>
+                </div>
+                </section>
+                <section class="bg-gradient-to-bl from-blue-500 to-indigo-400 via-white">
+                    <div class="landing-page ">
+                        <div class="my-5 hero-text max-w-[750px]">
+                            <h1></h1>
+                            <h1 class="text-[20px] sm:pl-20 px-8  text-[48px]      sm:text-[60px] text-gray-900 leading-[1.3] font-bold tracking-[-0.025em] mb-[16px]  "> Step into success with Beauroi.com <span class="block    font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-blue-400 inline">
+                                </span> </h1>
+                            <p class="sm:pl-20 px-8  text-[18px] ">where innovation shapes your business future. Explore brilliance now!</p>
+                        </div>
+                        <div class="image-container">
+                            <img class="person-image p-[30%]" src="image91.png" alt="cloud">
+                            <img class="ball-image right-ball" src="image1.png" alt="Ball">
+                            <img class="ball-image left-ball" src="image4.png" alt="Ball">
+                            <img class="ball-image bright-ball" src="image3.png" alt="Ball">
+                            <img class="ball-image bleft-ball" src="image2.png" alt="Ball">
+                            <img class="ball-image t-ball" src="image7.png" alt="Ball">
+                            <img class="ball-image trb" src="image10.png" alt="Ball">
+                            <img class="ball-image tlb" src="image6.png" alt="Ball">
+                            <img class="ball-image tb" src="image8.png" alt="Ball">
+                        </div>
+                    </div>
+                    <section class="pt-12">
+                        <div class="flex  py-2 justify-center">
+                            <h2 class="text-4xl px-4 font-semibold text-center  text-gray-600 sm:text-4xl lg:text-5xl pb-4">
+                                Industries Covered
+                            </h2>
+                        </div>
+                        <div class="logobody flex justify-center px-3 sm:px-10 pb-10 sm:pb-20">
+                            <div class="scroller" data-speed="slow">
+                                <div class="scroller__inner">
+                                    <img width="250px" class="mx-6 opacity-65 " src="education.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="banking.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="manufacturing.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="healthcare.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="ecommerce.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="education.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="banking.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="manufacturing.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="healthcare.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="ecommerce.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="education.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="banking.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="manufacturing.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="healthcare.png" />
+                                    <img width="250px" class="mx-6 opacity-65 " src="ecommerce.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <style>
+                    .landing-page {
+  display: flex;
+  flex-direction: row; /* Place text and image side-by-side on desktop */
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.image-container {
+  position: relative;
+  width: 50%; /* Adjust image width as needed */
+}
+
+.person-image {
+  border-radius:55%;
+
+  height: auto; 
+
+  object-fit: cover;
+
+
+}
+
+.ball-image {
+  position: absolute;
+  border-radius:50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15%; /* Adjust size as needed */
+}
+
+.bright-ball {
+  left: 70%; /* Adjust horizontal position within container */
+  top: 72%;
+
+}
+
+.bleft-ball {
+  left: 15%; /* Adjust horizontal position within container */
+  top: 70%;
+
+}
+.t-ball {
+   /* Adjust horizontal position within container */
+  top: 19%;
+
+  left: 41%;
+
+}
+.trb {
+
+  top: 28%;
+
+  left: 68%;
+
+}
+.tlb {
+
+  top: 28%;
+
+  left: 16%;
+
+}
+.tb {
+
+  top: 80%;
+
+  left: 41%;
+
+}
+.right-ball {
+  left: 79%; /* Adjust horizontal position within container */
+}
+
+.left-ball {
+  left: 6%; /* Adjust horizontal position within container */
+}
+
+@media (max-width: 972px) {
+  .landing-page {
+    flex-direction: column; /* Place text above image on mobile */
+  }
+.hero-text {
+  padding: 14px;
+}
+  .image-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+/* Add extra animations for the floating balls, if desired */
+.ball-image {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-50%) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-40%) rotate(2deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(7deg);
+  }
+}
+
+/* scroll animation starts here  Add extra animations for the floating balls, if desired */
+
+
+
+  </style>
+                <!-- nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnlogooooooooooooooooooooooooooooooooooonnn -->
+                <!--                <!-- Begin of Chaport Live Chat code -->
+                <script type="text/javascript">
+                (function(w, d, v3) {
+                    w.chaportConfig = {
+                        appId: '658da2acbd07dc1538a24861'
+                    };
+
+                    if (w.chaport) return;
+                    v3 = w.chaport = {};
+                    v3._q = [];
+                    v3._l = {};
+                    v3.q = function() { v3._q.push(arguments) };
+                    v3.on = function(e, fn) {
+                        if (!v3._l[e]) v3._l[e] = [];
+                        v3._l[e].push(fn)
+                    };
+                    var s = d.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = 'https://app.chaport.com/javascripts/insert.js';
+                    var ss = d.getElementsByTagName('script')[0];
+                    ss.parentNode.insertBefore(s, ss)
+                })(window, document);
+                </script>
+                <!-- End of Chaport Live Chat code -->
+                <!-- Start of Tawk.to Script -->
+                <!--                 <script type="text/javascript">
+                var Tawk_API = Tawk_API || {},
+                    Tawk_LoadStart = new Date();
+                (function() {
+                    var s1 = document.createElement("script"),
+                        s0 = document.getElementsByTagName("script")[0];
+                    s1.async = true;
+                    s1.src = 'https://embed.tawk.to/658daa0270c9f2407f841867/1hiom06vn';
+                    s1.charset = 'UTF-8';
+                    s1.setAttribute('crossorigin', '*');
+                    s0.parentNode.insertBefore(s1, s0);
+                })();
+                </script>
+ -->
+                <!--End of Tawk.to Script
+                <!-- nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnlogooooooooooooooooooooooooooooooooooonnn -->
+                <!-- 888888888888888888888888888888888888888888888888888888888888 --!>
+
+                <!-- component -->
+                <section class="py-20  sm:py-16 lg:py-24 z-40 relative">
+                    <div class="container px-4 mx-auto items-center flex flex-col ">
+                        <h2 class="text-4xl px-4 font-bold text-center  text-black sm:text-4xl lg:text-5xl">
+                            <span class="block    font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-blue-400 inline">Services
+                            </span>We Offer
+                        </h2>
+                        <p class="sm:mb-20 mb-10  px-4 mx-auto pt-4 text-center  text-md text-gray-700">Comes directly from the desk of engineers, creators and managers at
+                            Skcript.creators and managers at
+                            Skcript.
+                        </p>
+                        <div class="grid grid-cols-1 gap-10 px-10 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
+                            <a href="#" class="shadow-sm relative hover:-translate-y-5 hover:scale-101 duration-[1s] ">
+                                <div class="  h-full relative shadow-sm rounded-xl  overflow-hidden group ">
+                                    <div class=" absolute -bottom-10 top-14 group-hover:top-0 left-0 w-full h-full group-hover:bg-black/60 transition-all ease-in-out duration-500  ">
+                                        <div class="w-full h-full   p-5   relative">
+                                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                                <h2 class="text-2xl font-bold  text-white mb-6 pb-4">Discover Augmental AI</h2>
+                                                <p class="text-lg font-light text-white ">Shaping a Limitless Tomorrow </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="augmentalai.jpg" class="w-full z-0  h-full    object-fill example ">
+                                </div>
+                            </a>
+                            <a href="#" class="shadow-sm relative hover:-translate-y-5 hover:scale-101 duration-[1s] ">
+                                <div class="  h-full relative shadow-sm rounded-xl  overflow-hidden group ">
+                                    <div class=" absolute -bottom-10 top-14 group-hover:top-0 left-0 w-full h-full group-hover:bg-black/60 transition-all ease-in-out duration-500  ">
+                                        <div class="w-full h-full   p-5   relative">
+                                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                                <h2 class="text-2xl font-bold  text-white mb-6 pb-4">MultiCloud Computing</h2>
+                                                <p class="text-lg font-light text-white">Simplifying Complexities, Maximizing Value</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="multicloud.jpg" class="w-full z-0  h-full    object-fill example ">
+                                </div>
+                            </a>
+                            <a href="#" class="shadow-sm relative hover:-translate-y-5 hover:scale-101 duration-[1s] ">
+                                <div class="  h-full relative shadow-sm rounded-xl  overflow-hidden group ">
+                                    <div class=" absolute -bottom-10 top-14 group-hover:top-0 left-0 w-full h-full group-hover:bg-black/60 transition-all ease-in-out duration-500  ">
+                                        <div class="w-full h-full   p-5   relative">
+                                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                                <h2 class="text-2xl font-bold  text-white mb-6 pb-4">Application Development</h2>
+                                                <p class="text-lg font-light text-white">Tailored Solutions for Your Unique Needs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="appdev.jpg" class="w-full z-0  h-full    object-fill example ">
+                                </div>
+                            </a>
+                            <a href="#" class="shadow-sm relative hover:-translate-y-5 hover:scale-101 duration-[1s] ">
+                                <div class="  h-full relative shadow-sm rounded-xl  overflow-hidden group ">
+                                    <div class=" absolute -bottom-10 top-14 group-hover:top-0 left-0 w-full h-full group-hover:bg-black/60 transition-all ease-in-out duration-500  ">
+                                        <div class="w-full h-full   p-5   relative">
+                                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                                <h2 class="text-2xl font-bold  text-white mb-6 pb-4">Data & Analytics</h2>
+                                                <p class="text-lg font-light text-white"> Unleash Your Business's Untapped Potential</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="data.jpg" class="w-full z-0  h-full    object-fill example ">
+                                </div>
+                            </a>
+                            <a href="#" class="shadow-sm relative hover:-translate-y-5 hover:scale-101 duration-[1s] ">
+                                <div class="  h-full relative shadow-sm rounded-xl  overflow-hidden group ">
+                                    <div class=" absolute -bottom-10 top-14 group-hover:top-0 left-0 w-full h-full group-hover:bg-black/60 transition-all ease-in-out duration-500  ">
+                                        <div class="w-full h-full   p-5   relative">
+                                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                                <h2 class="text-2xl font-bold  text-white mb-6 pb-4">Strategic IT Consultation</h2>
+                                                <p class="text-lg font-light text-white">Your Pathway to Success in the Digital Era</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="strategy.jpg" class="w-full z-0  h-full    object-fill example ">
+                                </div>
+                            </a>
+                            <a href="#" class="shadow-sm relative hover:-translate-y-5 hover:scale-101 duration-[1s] ">
+                                <div class="  h-full relative shadow-sm rounded-xl  overflow-hidden group ">
+                                    <div class=" absolute -bottom-10 top-14 group-hover:top-0 left-0 w-full h-full group-hover:bg-black/60 transition-all ease-in-out duration-500  ">
+                                        <div class="w-full h-full   p-5   relative">
+                                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                                <h2 class="text-2xl font-bold  text-white mb-6 pb-4">Time & Material</h2>
+                                                <p class="text-lg font-light text-white">Measurable Results, Consistently Delivered</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="time.jpg" class="w-full z-0  h-full    object-fill example ">
+                                </div>
+                            </a>
+                            <a href="#" class="shadow-sm relative hover:-translate-y-5 hover:scale-101 duration-[1s] ">
+                                <div class="  h-full relative shadow-sm rounded-xl  overflow-hidden group ">
+                                    <div class=" absolute -bottom-10 top-14 group-hover:top-0 left-0 w-full h-full group-hover:bg-black/60 transition-all ease-in-out duration-500  ">
+                                        <div class="w-full h-full   p-5   relative">
+                                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                                <h2 class="text-2xl font-bold  text-white mb-6 pb-4">24/7 </h2>
+                                                <p class="text-lg font-light text-white">Support That Exceeds Your Imagination</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="24-7.jpg" class="w-full z-0  h-full    object-fill example ">
+                                </div>
+                            </a>
+                            <a href="#" class="shadow-sm relative hover:-translate-y-5 hover:scale-101 duration-[1s] ">
+                                <div class="  h-full relative shadow-sm rounded-xl  overflow-hidden group ">
+                                    <div class=" absolute -bottom-10 top-14 group-hover:top-0 left-0 w-full h-full group-hover:bg-black/60 transition-all ease-in-out duration-500  ">
+                                        <div class="w-full h-full   p-5   relative">
+                                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                                <h2 class="text-2xl font-bold  text-white stroke-2 stroke-black mb-6 pb-4">Training & Recruitment</h2>
+                                                <p class="text-lg font-light text-white">Crafting Industry-Ready Talent</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="training.jpg" class="w-full z-0  h-full    object-fill example ">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnlgooooooooooooooooooooooooooooooooooonnn -->
+                <div class="retest">
+                    <h2 class="pt-32  text-4xl px-4 font-bold text-white text-center  text-black sm:text-4xl lg:text-5xl">What Say Our Clients
+                    </h2>
+                    <style>
+                        .retest{
+    margin: 0;
+    padding: 0;
+    background: #0a69ed; 
+}
+.carousel{
+    height: 600px; 
+    perspective: 250px;    
+    
+}
+.carousel .carousel-item {
+    width: 450px;
+    background: #fff;
+    padding: 50px;
+    height: auto;
+    text-align: center;
+    border-radius: 15px;
+}
+.img-area {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+        .img-area img{
+            width: 100%;
+        }
+        .testi p {
+    color: #262626;
+    font-size: 12px;
+    line-height: 1.7;
+}
+        .testi h4 {
+    font-size: 20px;
+    margin: 0;
+    color: #000;
+}
+        .testi h5 {
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin: 7px 0;
+}
+
+    </style>
+                    <div class="carousel">
+                        <a class="carousel-item" href="#">
+                            <div class="testi">
+                                <div class="img-area">
+                                    <img src="https://beauroi.com/img/placeholder.png">
+                                </div>
+                                <p>"Beau Roi implemented E-commerce for us using Google Cloud Spanner which revolutionized our business proceedings. The management of our
+                                    worldwide inventory was in disarray until we seamlessly incorporated it. Through its expansive, worldwide database, we attained swifter loading times, instantaneous inventory updates, and a substantial surge in sales. Our gratitude goes out to the Beau Roi Team for their instrumental role in this achievement"</p>
+                                <h4>Jessica Jones</h4>
+                                <h5>Web Designer</h5>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="#">
+                            <div class="testi">
+                                <div class="img-area">
+                                    <img src="https://beauroi.com/img/placeholder.png">
+                                </div>
+                                <p>"Big data analytics has had a profound impact on our healthcare organization. We now have the ability to analyze vast amounts of patient data, leading to more accurate diagnoses, personalized treatment plans, and improved patient outcomes. It's incredible to see how data-driven insights are transforming the healthcare landscape and saving lives. Very satisfying service with real work, and the Beau Roi Team have proven it. There's nothing more exciting when the marketing strategies and campaign”</p>
+                                <h4>Jessica Jones</h4>
+                                <h5>Web Designer</h5>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="#">
+                            <div class="testi">
+                                <div class="img-area">
+                                    <img src="https://beauroi.com/img/placeholder.png">
+                                </div>
+                                <p>Beau Roi’s Team dedicatedly worked on our manufacturing operations using different services like BigQuery, BQML, Pub/Sub, Dataflow, Spanner and Cloud storage to reduce the downtime, improving efficiency with uninterrupted production. This Analytics ecosystem makes Beau Roi more competitive and agile in the market.</p>
+                                <h4>Jessica Jones</h4>
+                                <h5>Web Designer</h5>
+                            </div>
+                        </a>
+                        <a class="carousel-item" href="#">
+                            <div class="testi">
+                                <div class="img-area">
+                                    <img src="https://beauroi.com/img/placeholder.png">
+                                </div>
+                                <p>Beau Roi has truly transformed our digital landscape! Through strategic integration of AWS services such as EC2, Lambda, and S3, we've witnessed a remarkable 40% reduction in infrastructure costs. Our productivity has soared, thanks to seamlessly executed and auto-scaled marketing campaigns using Lambda functions.</p>
+                                <h4>Jessica Jones</h4>
+                                <h5>Web Designer</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                    <script>
+                        $(document).ready(function(){
+    $('.carousel').carousel({
+            padding: 200
+    });
+    autoplay();
+    function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 4500);
+    }
+  });
+</script>
+                </div>
+                <!-- nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnlgooooooooooooooooooooooooooooooooooonnn -->
+                <section class="ball-mouse-section overflow-hidden flex flex-col items-center bg-gradient-to-r from-blue-900 to-teal-500  py-24 maskk">
+                    <h2 class=" sm:text-5xl pb-6 px-10 text-4xl leading-[1.25em] max-w-[768px] ml-[auto] mr-[auto] text-gray-900 font-semibold  text-center mb-6">The ultimate process for your bussiness growth</h2>
+                    <div class="scroller " data-direction="right" data-speed="slow">
+                        <div class="scroller__inner ">
+                            <div class=' flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">111Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">2Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">3Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">4Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">5Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">6Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">7Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">8Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">999Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">8Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">999Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroller" data-direction="left" data-speed="slow">
+                        <div class="scroller__inner">
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">111Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">2Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">3Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">4Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">5Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">6Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">7Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">8Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">999Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">8Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cursor-default flex items-center justify-center '>
+                                <div class=''>
+                                    <div class='max-w-[360px] mx-auto space-y-3 my-4 px-4'>
+                                        <div class="w-full h-full flex flex-row p-4 bg-black rounded-md">
+                                            <img width="200px" src="https://source.unsplash.com/random/140x145" />
+                                            <div class="ml-5">
+                                                <h1 class="font-semibold text-lg text-white mt-3">999Lorem ipsum</h1>
+                                                <p class="font-semibold text-sm text-gray-200">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="ball-mouse"></div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+  const ballMouse = document.querySelector('.ball-mouse');
+  const ballMouseSection = document.querySelector('.ball-mouse-section');
+
+  if (!ballMouse || !ballMouseSection) {
+    console.error('Ball-mouse element or section not found.');
+    return;
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    const isInsideBallMouseSection = ballMouseSection.contains(e.target);
+
+    if (isInsideBallMouseSection) {
+      ballMouse.style.display = 'block';
+      ballMouse.style.left = e.pageX + 'px';
+      ballMouse.style.top = e.pageY + 'px';
+    } else {
+      ballMouse.style.display = 'none';
+    }
+  });
+});
+
+</script>
+                <!-- <!-- scroll animation styles and scripts888888888888888888888888888888888888888888888888888888888888 -->
+                <style>
+                    .scroller {
+  max-width: 95%;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 40s;
+}
+
+.scroller__inner {
+  user-select: none;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+</style>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+    const scrollers = document.querySelectorAll(".scroller");
+
+    // If a user hasn't opted in for reduced motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+
+    function addAnimation() {
+      scrollers.forEach((scroller) => {
+        // add data-animated="true" to every `.scroller` on the page
+        scroller.setAttribute("data-animated", true);
+
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+
+        // Enable manual scrolling
+        let isMouseDown = false;
+        let startX;
+        let scrollLeft;
+
+        scrollerInner.addEventListener("mousedown", (e) => {
+          isMouseDown = true;
+          startX = e.pageX;
+          scrollLeft = scrollerInner.scrollLeft;
+          scrollerInner.style.cursor = "grabbing";
+        });
+
+        document.addEventListener("mouseup", () => {
+          isMouseDown = false;
+          scrollerInner.style.cursor = "grab";
+        });
+
+        document.addEventListener("mousemove", (e) => {
+          if (!isMouseDown) return;
+          const delta = startX - e.pageX;
+          startX = e.pageX;
+          scrollerInner.scrollLeft = scrollLeft + delta;
+        });
+
+        // Pause animation on hover
+        scroller.addEventListener("mouseover", () => {
+          scrollerInner.style.animationPlayState = "paused";
+        });
+
+        // Resume animation on mouse leave
+        scroller.addEventListener("mouseout", () => {
+          if (!isMouseDown) {
+            scrollerInner.style.animationPlayState = "running";
+          }
+        });
+      });
+    }
+  });
+
+
+
+
+</script>
+                <!-- component -->
+                <div class="p-6 py-20">
+                    <div class="flex flex-wrap items-center w-full max-w-5xl p-5 mx-auto text-left border border-gray-200 rounded lg:flex-nowrap md:p-8 dark:border-gray-700">
+                        <div class="flex-1 w-full mb-5 md:mb-0 md:pr-5 lg:pr-10 md:w-1/2">
+                            <h3 class="mb-2 text-2xl font-bold text-gray-700 dark:text-gray-200">Transformation Begins Here</h3>
+                            <p class="text-gray-500 dark:text-gray-400 ">Gear up to embark on a journey towards a greatest feature
+                            </p>
+                        </div>
+                        <div class="w-full px-1 flex-0 md:w-auto lg:w-1/2">
+                            <form novalidate=""><input type="hidden" name="tags" value="earlyaccess">
+                                <div class="flex flex-col sm:flex-row">
+                                    <input type="email" id="email" name="email" placeholder="Enter your email address" class="flex-1 px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md sm:mr-5 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"><button type="submit" class="ml-4 w-full px-6 py-4 mt-5 text-white bg-gray-800 rounded-md sm:mt-0 sm:w-auto whitespace-nowrap dark:bg-gray-700"> Les's Connect </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- component -->
+                <div class="flex justify-center items-center py-16 w-screen bg-white">
+                    <img src="industry.jpg" class="w-full max-xl:self-start max-lg:hidden max-xl:p-10  rounded-sm z-0  h-full     object-fill example ">
+                    <div class="container lg:mr-6   px-4 lg:px-2">
+                        <div class="w-full p-8 my-4 px-12 py-28  lg:pl-20  rounded-2xl shadow-2xl">
+                            <div class="flex">
+                                <h1 class="font-bold pb-6 uppercase text-4xl">Request for Services</h1>
+                            </div>
+                            <p class=" max-w-[450px] pt-4 leading-8 max-w-2xl text-md text-gray-700">Eager to propel growth a purposful transformating.
+                                We have left an incredible mark across industries. Now it's time to fuse our expertise with your belief.<br /> <br /> <span class="font-thin mt-8 text-xl">care to share a glimps of your journey</span>
+                            </p>
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="103d9f61-759f-4ac3-9b7a-0377c9d138c4">
+                                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+                                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder="First Name*" name="name" required />
+                                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder="Last Name*" name="lname" required />
+                                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="email" placeholder="Email*" name="email" required />
+                                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" placeholder="Phone*" name="ph:" required />
+                                </div>
+                                <div class="my-4">
+                                    <textarea placeholder="Message*" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="msg" required></textarea>
+                                </div>
+                                <div class="my-2 w-1/2 lg:w-1/4">
+                                    <button class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
+                      focus:outline-none focus:shadow-outline">
+                                        Send
+                                    </button>
+                                </div>
+                            </form>
+                            <script src="https://web3forms.com/client/script.js" async defer></script>
+                        </div>
+                    </div>
+                </div>
+                <section class="pb-[80px] pt-[80px] bg-opacity-[100%] bg-[#000000]">
+                    <div class="mt-[0px] mr-[auto] mb-[0px] ml-[auto] pt-[0px] md:pr-[32px] sm:pr-[24px] pr-[24px] lg:pr-[32px] pb-[0px] md:pl-[32px] sm:pl-[24px] pl-[24px] lg:pl-[32px] max-w-[1280px]">
+                        <div class="flex md:gap-[120px] sm:gap-[40px] gap-[40px] lg:gap-[120px] md:flex-col sm:flex-col flex-col lg:flex-col">
+                            <div class="flex-1 grid md:grid-cols-3 sm:grid-cols-3 grid-cols-4 lg:grid-cols-5 gap-[10px]">
+                                <div class="flex flex-col items-start space-y-[8px] text-opacity-[100%] text-[#ffffff]"><span class="font-bold text-[30px]" style="">Product</span> <a class="text-[30px] font-thin">Features</a> <a class="text-[30px] font-thin">Pricing</a> <a class="text-[30px] font-thin" style="">services<br><br class="trailingBreak"></a> </div>
+                                <div class="flex flex-col items-start space-y-[8px] text-opacity-[100%] text-[#ffffff]"><span class="font-bold text-[30px]" style="">Product</span> <a class="text-[30px] font-thin">Features</a> <a class="text-[30px] font-thin">Pricing</a> <a class="text-[30px] font-thin" style="">services<br><br class="trailingBreak"></a> </div>
+                                <div class="flex flex-col items-start space-y-[8px] text-opacity-[100%] text-[#ffffff]"><span class="font-bold text-[30px]" style="">Product</span> <a class="text-[30px] font-thin">Features</a> <a class="text-[30px] font-thin">Pricing</a> <a class="text-[30px] font-thin" style="">services<br><br class="trailingBreak"></a> </div>
+                                <div class="flex flex-col items-start space-y-[8px] text-opacity-[100%] text-[#ffffff]"><span class="font-bold text-[30px]" style="">Product</span> <a class="text-[30px] font-thin">Features</a> <a class="text-[30px] font-thin">Pricing</a> <a class="text-[30px] font-thin" style="">services<br><br class="trailingBreak"></a> </div>
+                                <div class="flex flex-col items-start space-y-[8px]"><span class="text-[30px] font-thin texopacity-[100%] text-[#FFFFFF]">Company</span> <a class="text-[30px] font-thin texopacity-[100%] text-[#FFFFFF]">About</a> <a class="text-[30px] font-thin texopacity-[100%] text-[#FFFFFF]">Contact</a> <a class="text-[14px] no-underline focus:outline-none text-[#000000] text-opacity-[75%]">Brand assets</a> </div>
+                                <div class="flex flex-col items-start space-y-[8px] text-opacity-[100%] text-[#ffffff]"><span class="font-bold text-[30px]" style="">Product</span> <a class="text-[30px] font-thin">Features</a> <a class="text-[30px] font-thin">Pricing</a> <a class="text-[30px] font-thin" style="">services<br><br class="trailingBreak"></a> </div>
+                                <div class="flex flex-col items-start space-y-[8px]"><span class="text-[30px] font-thin texopacity-[100%] text-[#FFFFFF]">Company</span> <a class="text-[30px] font-thin texopacity-[100%] text-[#FFFFFF]">About</a> <a class="text-[30px] font-thin texopacity-[100%] text-[#FFFFFF]">Contact</a> <a class="text-[14px] no-underline focus:outline-none text-[#000000] text-opacity-[75%]">Brand assets</a> </div>
+                                <div class="flex flex-col items-start space-y-[8px]"><span class="text-[14px] font-bold">Learn</span> <a class="text-[14px] no-underline focus:outline-none text-[#000000] text-opacity-[75%]">Documentation</a> <a class="text-[14px] no-underline focus:outline-none text-[#000000] text-opacity-[75%]">Video tutorials</a> <a class="text-[14px] no-underline focus:outline-none text-[#000000] text-opacity-[75%]">Blog</a> </div>
+                            </div>
+                            <div class="md:w-[25%] sm:w-[100%] w-[100%] lg:w-[45%] flex flex-col items-start gap-[20px]">
+                                <p class="text-opacity-[80%] text-[16px] text-gray-200 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </div> <span class="text-[12px] block text-center text-opacity-[50%] text-[#ffffff] mt-[94px]">© 2023All rights reserved.</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
